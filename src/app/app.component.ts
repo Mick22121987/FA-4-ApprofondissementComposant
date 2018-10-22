@@ -10,4 +10,8 @@ export class AppComponent {
 
   constructor() {
   }
+
+  public deleteFruit(fruit: string) {
+    this.fruits.splice(this.fruits.indexOf(fruit), 1);
+  }
 }
