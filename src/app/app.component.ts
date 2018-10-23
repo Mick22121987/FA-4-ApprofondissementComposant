@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +9,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 export class AppComponent {
   public fruit: string;
   public fruits: string[] = ['pomme', 'poire', 'fraise', 'melon'];
+  @ViewChild('f') public el: ElementRef
 
   constructor() {
   }
@@ -17,7 +18,7 @@ export class AppComponent {
     this.fruits.splice(this.fruits.indexOf(fruit), 1);
   }
 
-  public addFruit(reference: any) {
-    this.fruits.push(reference.value);
+  public addFruit() {
+    this.fruits.push(this.el.nativeElement.value)
   }
 }
