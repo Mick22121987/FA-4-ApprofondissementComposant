@@ -16,4 +16,8 @@ export class AppComponent {
   public deleteFruit(fruit: string) {
     this.fruits.splice(this.fruits.indexOf(fruit), 1);
   }
+
+  public addFruit(reference: any) {
+    this.fruits.push(reference.value);
+  }
 }

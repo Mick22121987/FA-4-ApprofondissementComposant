@@ -1,8 +1,8 @@
 <div class="row">
   <div class="col-6 mx-auto">
     <div class="row" style="margin-top:150px;">
-      <input type="text" class="form-control col-9" [(ngModel)]="fruit"/>
-      <button class="btn btn-primary col-3" (click)="fruits.push(fruit)">Ajouter</button>
+      <input type="text" class="form-control col-9" #f/>
+      <button class="btn btn-primary col-3" (click)="addFruit(f)">Ajouter</button>
     </div>
   </div>
 </div>
