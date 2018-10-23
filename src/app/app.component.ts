@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class AppComponent {
   public fruit: string;
-  public fruits: string[] = [];
+  public fruits: string[] = ['pomme', 'poire', 'fraise', 'melon'];
 
   constructor() {
   }
