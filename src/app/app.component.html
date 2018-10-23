@@ -9,6 +9,8 @@
 
 <div class="row" style="margin-top:100px;">
   <ul class="list-group list-group-flush col-8 mx-auto">
-    <app-item *ngFor="let f of fruits" [fruit]="f" (deleteF)="deleteFruit($event)"></app-item>
+    <app-item *ngFor="let f of fruits; let i = index;" (deleteF)="deleteFruit($event)">
+      {{ fruits[i] }}
+    </app-item>
   </ul>
 </div>
