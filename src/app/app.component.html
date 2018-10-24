@@ -10,7 +10,7 @@
 <div class="row" style="margin-top:100px;">
   <ul class="list-group list-group-flush col-8 mx-auto">
     <app-item *ngFor="let f of fruits; let i = index;" (deleteF)="deleteFruit($event)">
-      {{ fruits[i] }}
+      <p #p >{{ fruits[i] }}</p>
     </app-item>
   </ul>
 </div>
